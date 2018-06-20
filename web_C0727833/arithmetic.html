@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Arithmentic</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		.top {
+			padding-top: 80px;
+		}
+		.space {
+			padding-top: 33px;
+		}
+		.uname {
+
+		}
+		.pass {
+
+		}
+		.xy {
+			border: 1px solid red;
+		}
+		#error {
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+	 	
+		
+	 	function plus() {
+	 		
+	 			
+		 		var name1 = document.getElementById('value1').value;
+		 		var name2 = document.getElementById('value2').value;
+
+		 		// document.write(name1);
+
+		 		if(name1 == "" && name2 == "") {
+
+	 			document.getElementById('error').innerHTML = "Enter Valid Credential";
+	 			return false;
+	 		} else {
+		 		var plus = +name1 + +name2;
+		 		// return name2,name1;
+		 		 document.getElementById('error').innerHTML = plus;
+		 		//alert(plus);
+	 		// return true;
+	 		}
+	 		
+	 	}
+
+	 	function minus() {
+	 		var name1 = document.getElementById('value1').value;
+	 		var name2 = document.getElementById('value2').value;
+
+	 		if(name1 == "" && name2 == "") {
+
+	 			document.getElementById('error').innerHTML = "Enter Valid Credential";
+	 			return false;
+	 		} else {
+		 		var minus = name1 - name2;
+		 		document.getElementById('xyz').innerHTML = minus;
+		 		//alert(minus);
+		 	}
+	 	}
+
+	 	function mul() {
+	 		var name1 = document.getElementById('value1').value;
+	 		var name2 = document.getElementById('value2').value;
+	 		if(name1 == "" && name2 == "") {
+
+	 			document.getElementById('error').innerHTML = "Enter Valid Credential";
+	 			return false;
+	 		} else {
+
+		 		var nul = name1 * name2;
+		 		document.getElementById('xyz').innerHTML = nul;
+		 		//alert(nul);
+		 	}
+	 	}
+
+	 	function div() {
+	 		var name1 = document.getElementById('value1').value;
+	 		var name2 = document.getElementById('value2').value;
+	 		if(name1 == "" && name2 == "") {
+
+	 			document.getElementById('error').innerHTML = "Enter Valid Credential";
+	 			return false;
+	 		} 
+		 		else {
+		 		var div = name1 / name2;
+		 		document.getElementById('xyz').innerHTML = div;
+		 	}
+	 	}
+	</script>
+</head>
+<body>
+
+	<div class="container">
+	  <h2>Calculator</h2>
+	  <!-- <form method="POST"> -->
+	  	<span id="error"></span>
+	  	<span id="xyz"></span>
+	    <div class="form-group">
+	      <label for="username">Value1:</label>
+	      <input type="number" class="form-control" id="value1" placeholder="Enter value1" name="value1">
+	    </div>
+	    <div class="form-group">
+	      <label for="pwd">value2:</label>
+	      <input type="number" class="form-control" id="value2" placeholder="Enter value2" name="value2">
+	    </div>
+	      <br>
+	   
+	
+		<!-- <input type="text" name="value1" id="value1">
+		<input type="text" name="value2" id="value2"> -->
+		<button type="submit" class="btn btn-info btn-lg" onclick="plus()">&#x2b;</button>
+		<button type="submit" class="btn btn-info btn-lg"  onclick="minus()">&#x2212;</button>
+		<button type="submit" class="btn btn-info btn-lg" onclick="mul()">&times;</button>
+		<button type="submit" class="btn btn-info btn-lg"  onclick="div()">&divide;</button>
+	</div>
+		<!-- <button type="submit" onclick="plus()">Plus</button> -->
+		<!-- <button type="submit" onclick="minus()">Minus</button>
+		<button type="submit" onclick="mul()">Mul</button>
+		<button type="submit" onclick="div()">Div</button> -->
+	<!-- </form> -->
+
+</body>
+</html>

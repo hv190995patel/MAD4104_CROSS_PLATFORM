@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		.top {
+			padding-top: 80px;
+		}
+		.space {
+			padding-top: 33px;
+		}
+		.uname {
+
+		}
+		.pass {
+
+		}
+		.xy {
+			border: 1px solid red;
+		}
+		#error {
+			color: red;
+		}
+	</style>
+	<script type="text/javascript">
+		var attempt = 0;
+		function check() {
+			
+			var username = document.getElementById("username").value;
+			var password = document.getElementById('password').value;
+			// alert(username);
+			if(username == "") {
+				document.getElementById('error').innerHTML = "Enter Valid Credential";
+				// alert("Enter username");
+			} else if(password == "") {
+				document.getElementById('error').innerHTML = "Enter  Valid Credentials";
+			}else if(username == "admin" && password == "123456") {
+				//alert("Login");
+				window.location = "arithmetic.html";
+			}
+			else {
+				attempt++;
+				document.getElementById('error').innerHTML = "Invaid Login Credentials";
+				//alert("bvhd");
+			//	alert(attempt);
+				// return false;
+				if(attempt == "3") {
+					// alert("false");
+					document.getElementById('error').innerHTML = "You Are out of attempts";
+							 document.getElementById("submit").disabled = true;
+				}
+			}
+			
+		}
+		
+	</script>
+
+</head>
+<body>
+	
+
+	<div class="container">
+	  <h2>Login form</h2>
+	  <!-- <form    method="POST"> -->
+	  	<span id="error"></span>
+	    <div class="form-group">
+	      <label for="username">Username:</label>
+	      <input type="text" class="form-control" id="username" placeholder="Enter Username" name="username">
+	    </div>
+	    <div class="form-group">
+	      <label for="pwd">Password:</label>
+	      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password">
+	    </div>
+	      <br>
+	    <input type="submit" class="btn btn-succes" id="submit" onclick="check()">
+	    <!-- <button type="submit" class="btn btn-success" onclick="check()">Login</button> -->
+	   <input type="reset" class="btn btn-danger">
+	  <!-- </form> -->
+	</div>
+	<!-- </form> -->
+</body>
+</html>
